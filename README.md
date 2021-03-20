@@ -9,7 +9,7 @@ The idea of the camera course is to build a collision detection system - that's 
 * In the next part, you will then focus on descriptor extraction and matching using brute force and also the FLANN approach we discussed in the previous lesson. 
 * In the last part, once the code framework is complete, you will test the various algorithms in different combinations and compare them with regard to some performance measures. 
 
-=============================================================================
+
 MP.1 Data Buffer Optimization
 The size of the DataFrame object is limited to the current value of the variable dataBufferSize,
 previously initialized to 2, as requested. By using an if-else structure, I fill this DataFrame object until it stores 
@@ -18,7 +18,7 @@ method erase() and a new element is introduced by using the method push_back.
 File MidTermProject_Camera_Student.cpp
 Line 39: Definition and initialization of the variable dataBufferSize.
 Lines 66- 74: Management of the DataFrame object and its content.
-=============================================================================
+
 MP.2 Keypoint Detection
 A string called detectorType is used in the code to allocate the detector to be used. In case ofwanting 
 to use a different one, it is needed to change the value of this string by the one corresponding to the detector 
