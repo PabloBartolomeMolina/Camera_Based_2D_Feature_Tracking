@@ -10,7 +10,7 @@ The idea of the camera course is to build a collision detection system - that's 
 * In the last part, once the code framework is complete, you will test the various algorithms in different combinations and compare them with regard to some performance measures. 
 
 
-MP.1 Data Buffer Optimization
+# MP.1 Data Buffer Optimization
 The size of the DataFrame object is limited to the current value of the variable dataBufferSize,
 previously initialized to 2, as requested. By using an if-else structure, I fill this DataFrame object until it stores 
 2 images by using the method push_back. Once it allocates 2 images, the first element is erased thanks to the 
@@ -19,7 +19,7 @@ File MidTermProject_Camera_Student.cpp
 Line 39: Definition and initialization of the variable dataBufferSize.
 Lines 66- 74: Management of the DataFrame object and its content.
 
-MP.2 Keypoint Detection
+# MP.2 Keypoint Detection
 A string called detectorType is used in the code to allocate the detector to be used. In case ofwanting 
 to use a different one, it is needed to change the value of this string by the one corresponding to the detector 
 to be used. Once it is defined, an if-else structure will call the corresponding function according to the detector
@@ -37,8 +37,8 @@ File matching2D_Student.cpp
 Implementation is done in the 3 functions detKeypointsShiTomasi, detKeypointsHarris and 
 detKeypointsModern. Each detector has been implemented as done in the previous exercises and following 
 the OpenCV documentation for all of them that is available in the official page of the library.
-=============================================================================
-MP.3 Keypoint Removal
+
+# MP.3 Keypoint Removal
 It is only executed if the boolean variable is passed to TRUE in line 117.Inside a for loop the code goes over all the elements inside the vector with all the detected keypoints.
 In case that a keypoint is located inside the desired window (which is centered in the preceding car to enclose 
 it), this is stored in a temporal vector. In any other case, nothing is done with the keypoint.
@@ -54,8 +54,8 @@ File MidTermProject_Camera_Student.cpp
 Lines 119 - 141: Code to perform the removal of keypoints.
 Lines 143 – 149: Commented code to know the keypoints corresponding to the preceding vehicle area 
 of the image. It is needed to comment lines 140 & 141 to properly run this code fragment.
-=============================================================================
-MP.4 Keypoint Descriptors
+
+# MP.4 Keypoint Descriptors
 In the line 170 the variable descriptorType is initialized with the descriptor to be used. Its value shall 
 be manually changed in case of wanting to use another one. The descriptors to use are BRISK, BRIEF, ORB, 
 FREAK, AKAZE and SIFT.
@@ -82,9 +82,9 @@ Selection of descriptor, descriptorClass automated selection and call to the des
 lines.
 File matching2D_Student.cpp
 All the implementation is in the function matchDescriptors.
-=============================================================================
-MP.5 Descriptor Matching
-MP.6 Descriptor Distance Ratio
+
+# MP.5 Descriptor Matching
+# MP.6 Descriptor Distance Ratio
 This is done in the function matchDescriptors inside the file matching2D_Student.cpp.
 The matcher is created as stated in the official OpenCV documentation:
 matcher = cv::DescriptorMatcher::create(cv::DescriptorMatcher::FLANNBASED);
@@ -95,7 +95,7 @@ matches, I store only the good ones in the vector called matches. Then, the diff
 knn_matches and matches gives the number of deleted keypoints.
 File matching2D_Student.cpp
 All the implementation is in the function matchDescriptors.
-=============================================================================
+
 
 ## Dependencies for Running Locally
 * cmake >= 2.8
